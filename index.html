@@ -3,160 +3,310 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HAYYA STORE – Top Up Game</title>
+<title>Game Top Up</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+*{box-sizing:border-box;font-family:Arial Black, Arial;}
+body{margin:0;background:#0b0b0b;color:white;overflow:hidden}
 
-* {
-  box-sizing: border-box;
+.page{
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left:100%;
+  padding:20px;
+  overflow-y:auto;
+  transition:0.6s ease;
 }
+.page.active{left:0}
 
-body {
-  margin: 0;
-  font-family: 'Press Start 2P', monospace;
-  background: #0b0b0e;
-  color: #fff;
-}
+.title{font-size:28px;text-align:center;margin-bottom:15px}
 
-header {
-  background: linear-gradient(135deg,#ffb000,#ff7a00);
-  padding: 30px 15px;
-  text-align: center;
-  color: #000;
+.game-card{
+  background:#161616;
+  padding:18px;
+  border-radius:14px;
+  font-size:20px;
+  margin-bottom:14px;
+  text-align:center;
+  cursor:pointer;
+  transition:0.3s;
 }
+.game-card:hover{transform:scale(1.05)}
 
-header h1 {
-  margin: 0;
-  font-size: 18px;
+.back{color:#6ea8ff;margin-bottom:14px;cursor:pointer}
+.price-title{font-size:26px;text-align:center;margin-bottom:16px}
+.price-item{
+  background:#161616;
+  padding:14px;
+  border-radius:12px;
+  margin-bottom:10px;
+  font-size:18px;
 }
-
-header p {
-  margin-top: 10px;
-  font-size: 10px;
-}
-
-.section {
-  padding: 20px;
-}
-
-.game {
-  background: #14141c;
-  border-radius: 18px;
-  padding: 20px;
-  margin-bottom: 25px;
-  animation: fadeUp .6s ease;
-}
-
-.game h2 {
-  font-size: 12px;
-  margin-bottom: 15px;
-  color: #ffb000;
-}
-
-.list {
-  max-height: 420px;
-  overflow-y: auto;
-  padding-right: 5px;
-}
-
-.item {
-  display: flex;
-  justify-content: space-between;
-  font-size: 9px;
-  padding: 10px 0;
-  border-bottom: 1px dashed #2a2a33;
-}
-
-.item:last-child {
-  border-bottom: none;
-}
-
-@keyframes fadeUp {
-  from { opacity:0; transform:translateY(20px); }
-  to { opacity:1; transform:translateY(0); }
-}
-
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-thumb {
-  background: #ff9c00;
-  border-radius: 10px;
-}
+.section{margin-top:25px;font-size:20px}
 </style>
 </head>
 
 <body>
 
-<header>
-  <h1>TOP UP GAME</h1>
-  <p>Harga Final • Blocky Style</p>
-</header>
-
-<div class="section">
+<!-- HOME -->
+<div class="page active" id="home">
+  <div class="title">PILIH GAME</div>
+  <div class="game-card" onclick="openPage('ff')">FREE FIRE</div>
+  <div class="game-card" onclick="openPage('ml')">MOBILE LEGENDS</div>
+  <div class="game-card" onclick="openPage('genshin')">GENSHIN IMPACT</div>
+  <div class="game-card" onclick="openPage('hok')">HONOR OF KINGS</div>
+  <div class="game-card" onclick="openPage('pubg')">PUBG MOBILE</div>
+  <div class="game-card" onclick="openPage('supersus')">SUPER SUS</div>
+  <div class="game-card" onclick="openPage('roblox')">ROBLOX</div>
+</div>
 
 <!-- FREE FIRE -->
-<div class="game">
-<h2>🔥 FREE FIRE (FINAL)</h2>
-<div class="list">
-<div class="item"><span>5 Diamonds</span><span>Rp 1.000</span></div>
-<div class="item"><span>10 Diamonds</span><span>Rp 2.687</span></div>
-<div class="item"><span>12 Diamonds</span><span>Rp 2.837</span></div>
-<div class="item"><span>50 Diamonds</span><span>Rp 7.738</span></div>
-<div class="item"><span>55 Diamonds</span><span>Rp 8.547</span></div>
-<div class="item"><span>70 Diamonds</span><span>Rp 10.157</span></div>
-<div class="item"><span>80 Diamonds</span><span>Rp 11.847</span></div>
-<div class="item"><span>100 Diamonds</span><span>Rp 14.407</span></div>
-<div class="item"><span>120 Diamonds</span><span>Rp 16.863</span></div>
-<div class="item"><span>130 Diamonds</span><span>Rp 18.550</span></div>
-<div class="item"><span>140 Diamonds</span><span>Rp 19.314</span></div>
-<div class="item"><span>145 Diamonds</span><span>Rp 20.163</span></div>
-<div class="item"><span>150 Diamonds</span><span>Rp 23.006</span></div>
-<div class="item"><span>190 Diamonds</span><span>Rp 28.023</span></div>
-<div class="item"><span>200 Diamonds</span><span>Rp 29.710</span></div>
-<div class="item"><span>210 Diamonds</span><span>Rp 30.471</span></div>
-<div class="item"><span>280 Diamonds</span><span>Rp 39.628</span></div>
-<div class="item"><span>355 Diamonds</span><span>Rp 48.785</span></div>
-<div class="item"><span>420 Diamonds</span><span>Rp 57.942</span></div>
-<div class="item"><span>500 Diamonds</span><span>Rp 67.962</span></div>
-<div class="item"><span>510 Diamonds</span><span>Rp 69.648</span></div>
-<div class="item"><span>565 Diamonds</span><span>Rp 76.256</span></div>
-<div class="item"><span>635 Diamonds</span><span>Rp 85.413</span></div>
-<div class="item"><span>720 Diamonds</span><span>Rp 94.571</span></div>
-<div class="item"><span>800 Diamonds</span><span>Rp 112.417</span></div>
-<div class="item"><span>860 Diamonds</span><span>Rp 119.885</span></div>
-<div class="item"><span>930 Diamonds</span><span>Rp 129.042</span></div>
-<div class="item"><span>1000 Diamonds</span><span>Rp 138.199</span></div>
-<div class="item"><span>1075 Diamonds</span><span>Rp 147.356</span></div>
-<div class="item"><span>1080 Diamonds</span><span>Rp 148.213</span></div>
-<div class="item"><span>1450 Diamonds</span><span>Rp 193.141</span></div>
-<div class="item"><span>2180 Diamonds</span><span>Rp 284.712</span></div>
-<div class="item"><span>3640 Diamonds</span><span>Rp 472.853</span></div>
-<div class="item"><span>7290 Diamonds</span><span>Rp 941.338</span></div>
-<div class="item"><span>36500 Diamonds</span><span>Rp 4.651.647</span></div>
+<div class="page" id="ff">
+<div class="back" onclick="backHome()">← Kembali</div>
+<div class="price-title">FREE FIRE (HARGA FINAL)</div>
 
-<div class="item"><span>Level Up Pass Lv 6</span><span>Rp 6.053</span></div>
-<div class="item"><span>Level Up Pass Lv 10</span><span>Rp 9.422</span></div>
-<div class="item"><span>Level Up Pass Lv 15</span><span>Rp 9.422</span></div>
-<div class="item"><span>Level Up Pass Lv 20</span><span>Rp 9.422</span></div>
-<div class="item"><span>Level Up Pass Lv 25</span><span>Rp 9.422</span></div>
-<div class="item"><span>Level Up Pass Lv 30</span><span>Rp 14.475</span></div>
-<div class="item"><span>Mingguan Membership</span><span>Rp 31.073</span></div>
-<div class="item"><span>Bulanan Membership</span><span>Rp 87.219</span></div>
-<div class="item"><span>BP Card</span><span>Rp 45.110</span></div>
-</div>
-</div>
+<div class="price-item">5 Diamonds : Rp 1.000</div>
+<div class="price-item">10 Diamonds : Rp 2.687</div>
+<div class="price-item">12 Diamonds : Rp 2.837</div>
+<div class="price-item">50 Diamonds : Rp 7.738</div>
+<div class="price-item">55 Diamonds : Rp 8.547</div>
+<div class="price-item">70 Diamonds : Rp 10.157</div>
+<div class="price-item">80 Diamonds : Rp 11.847</div>
+<div class="price-item">100 Diamonds : Rp 14.407</div>
+<div class="price-item">120 Diamonds : Rp 16.863</div>
+<div class="price-item">130 Diamonds : Rp 18.550</div>
+<div class="price-item">140 Diamonds : Rp 19.314</div>
+<div class="price-item">145 Diamonds : Rp 20.163</div>
+<div class="price-item">150 Diamonds : Rp 23.006</div>
+<div class="price-item">190 Diamonds : Rp 28.023</div>
+<div class="price-item">200 Diamonds : Rp 29.710</div>
+<div class="price-item">210 Diamonds : Rp 30.471</div>
+<div class="price-item">280 Diamonds : Rp 39.628</div>
+<div class="price-item">355 Diamonds : Rp 48.785</div>
+<div class="price-item">420 Diamonds : Rp 57.942</div>
+<div class="price-item">500 Diamonds : Rp 67.962</div>
+<div class="price-item">510 Diamonds : Rp 69.648</div>
+<div class="price-item">565 Diamonds : Rp 76.256</div>
+<div class="price-item">635 Diamonds : Rp 85.413</div>
+<div class="price-item">720 Diamonds : Rp 94.571</div>
+<div class="price-item">800 Diamonds : Rp 112.417</div>
+<div class="price-item">860 Diamonds : Rp 119.885</div>
+<div class="price-item">930 Diamonds : Rp 129.042</div>
+<div class="price-item">1000 Diamonds : Rp 138.199</div>
+<div class="price-item">1050 Diamonds : Rp 144.913</div>
+<div class="price-item">1075 Diamonds : Rp 147.356</div>
+<div class="price-item">1080 Diamonds : Rp 148.213</div>
+<div class="price-item">1450 Diamonds : Rp 193.141</div>
+<div class="price-item">2180 Diamonds : Rp 284.712</div>
+<div class="price-item">2200 Diamonds : Rp 291.441</div>
+<div class="price-item">3640 Diamonds : Rp 472.853</div>
+<div class="price-item">7290 Diamonds : Rp 941.338</div>
+<div class="price-item">36500 Diamonds : Rp 4.651.647</div>
+<div class="price-item">73100 Diamonds : Rp 9.283.293</div>
 
-<!-- GAME LAIN -->
-<div class="game">
-<h2>🎮 MOBILE LEGENDS, GENSHIN, HOK, PUBG, SUPER SUS, ROBLOX</h2>
-<p style="font-size:8px;line-height:1.8">
-Semua harga **SUDAH MASUK** sesuai data yang kamu kirim.<br>
-Scroll aman • Tidak dipotong • Tidak disingkat.
-</p>
+<div class="section">MEMBERSHIP FREE FIRE</div>
+<div class="price-item">Level Up Pass Lv 6 : Rp 6.053</div>
+<div class="price-item">Level Up Pass Lv 10 : Rp 9.422</div>
+<div class="price-item">Level Up Pass Lv 15 : Rp 9.422</div>
+<div class="price-item">Level Up Pass Lv 20 : Rp 9.422</div>
+<div class="price-item">Level Up Pass Lv 25 : Rp 9.422</div>
+<div class="price-item">Level Up Pass Lv 30 : Rp 14.475</div>
+<div class="price-item">Mingguan Membership : Rp 31.073</div>
+<div class="price-item">Bulanan Membership : Rp 87.219</div>
+<div class="price-item">BP Card : Rp 45.110</div>
 </div>
 
+<!-- MOBILE LEGENDS -->
+<div class="page" id="ml">
+<div class="back" onclick="backHome()">← Kembali</div>
+<div class="price-title">MOBILE LEGENDS (HARGA FINAL)</div>
+
+<div class="price-item">Weekly Diamond Pass 2× : Rp 60.952</div>
+<div class="price-item">Weekly Diamond Pass : Rp 31.000</div>
+<div class="price-item">Twilight Pass : Rp 159.748</div>
+<div class="price-item">5 Diamonds : Rp 2.500</div>
+<div class="price-item">12 Diamonds : Rp 4.501</div>
+<div class="price-item">50 Diamonds : Rp 16.005</div>
+<div class="price-item">56 Diamonds : Rp 16.503</div>
+<div class="price-item">59 Diamonds : Rp 17.002</div>
+<div class="price-item">66 Diamonds : Rp 19.758</div>
+<div class="price-item">70 Diamonds : Rp 20.504</div>
+<div class="price-item">71 Diamonds : Rp 20.504</div>
+<div class="price-item">72 Diamonds : Rp 23.003</div>
+<div class="price-item">74 Diamonds : Rp 23.843 / Rp 24.504</div>
+<div class="price-item">78 Diamonds : Rp 24.504</div>
+<div class="price-item">80 Diamonds : Rp 25.506</div>
+<div class="price-item">83 Diamonds : Rp 26.447</div>
+<div class="price-item">85 Diamonds : Rp 26.003</div>
+<div class="price-item">92 Diamonds : Rp 29.005</div>
+<div class="price-item">98 Diamonds : Rp 30.505</div>
+<div class="price-item">100 Diamonds : Rp 30.505</div>
+<div class="price-item">110 Diamonds : Rp 33.507</div>
+<div class="price-item">113 Diamonds : Rp 33.708</div>
+<div class="price-item">118 Diamonds : Rp 35.004</div>
+<div class="price-item">129 Diamonds : Rp 38.005</div>
+<div class="price-item">144 Diamonds : Rp 42.005</div>
+<div class="price-item">170 Diamonds : Rp 48.568</div>
+<div class="price-item">182 Diamonds : Rp 52.508</div>
+<div class="price-item">184 Diamonds : Rp 55.104</div>
+<div class="price-item">229 Diamonds : Rp 65.009</div>
+<div class="price-item">240 Diamonds : Rp 67.873</div>
+<div class="price-item">257 Diamonds : Rp 72.210</div>
+<div class="price-item">278 Diamonds : Rp 78.876</div>
+<div class="price-item">284 Diamonds : Rp 79.875</div>
+<div class="price-item">284 Diamonds : Rp 80.526</div>
+<div class="price-item">296 Diamonds : Rp 82.829</div>
+<div class="price-item">301 Diamonds : Rp 83.555</div>
+<div class="price-item">324 Diamonds : Rp 90.830</div>
+<div class="price-item">345 Diamonds : Rp 96.332</div>
+<div class="price-item">355 Diamonds : Rp 98.831</div>
+<div class="price-item">366 Diamonds : Rp 114.208</div>
+<div class="price-item">374 Diamonds : Rp 111.333</div>
+<div class="price-item">381 Diamonds : Rp 112.833</div>
+<div class="price-item">408 Diamonds : Rp 119.788</div>
+<div class="price-item">425 Diamonds : Rp 124.834</div>
+<div class="price-item">427 Diamonds : Rp 125.290</div>
+<div class="price-item">450 Diamonds : Rp 134.621</div>
+<div class="price-item">512 Diamonds : Rp 148.292</div>
+<div class="price-item">518 Diamonds : Rp 151.294</div>
+<div class="price-item">522 Diamonds : Rp 151.294</div>
+<div class="price-item">554 Diamonds : Rp 160.295</div>
+<div class="price-item">568 Diamonds : Rp 159.748</div>
+<div class="price-item">601 Diamonds : Rp 174.558</div>
+<div class="price-item">712 Diamonds : Rp 198.753</div>
+<div class="price-item">716 Diamonds : Rp 200.255</div>
+<div class="price-item">717 Diamonds : Rp 200.255</div>
+<div class="price-item">750 Diamonds : Rp 209.255</div>
+<div class="price-item">758 Diamonds : Rp 218.418</div>
+<div class="price-item">762 Diamonds : Rp 215.665</div>
+<div class="price-item">808 Diamonds : Rp 224.621</div>
+<div class="price-item">875 Diamonds : Rp 239.532</div>
 </div>
+
+<!-- GENSHIN -->
+<div class="page" id="genshin">
+<div class="back" onclick="backHome()">← Kembali</div>
+<div class="price-title">GENSHIN IMPACT (HARGA FINAL)</div>
+<div class="price-item">60 Crystals : Rp 12.454</div>
+<div class="price-item">300 + 30 : Rp 61.165</div>
+<div class="price-item">980 + 110 : Rp 189.631</div>
+<div class="price-item">1280 + 140 : Rp 248.186</div>
+<div class="price-item">1980 + 260 : Rp 389.252</div>
+<div class="price-item">3280 + 600 : Rp 627.317</div>
+<div class="price-item">4260 + 710 : Rp 806.301</div>
+<div class="price-item">6480 + 1600 : Rp 1.192.448</div>
+<div class="price-item">9760 + 2200 : Rp 1.814.764</div>
+</div>
+
+<!-- HONOR OF KINGS -->
+<div class="page" id="hok">
+<div class="back" onclick="backHome()">← Kembali</div>
+<div class="price-title">HONOR OF KINGS</div>
+<div class="price-item">16 Tokens : Rp 3.956</div>
+<div class="price-item">80 Tokens : Rp 15.635</div>
+<div class="price-item">240 Tokens : Rp 47.008</div>
+<div class="price-item">400 Tokens : Rp 76.441</div>
+<div class="price-item">560 Tokens : Rp 112.874</div>
+<div class="price-item">800 + 30 : Rp 157.621</div>
+<div class="price-item">1200 + 45 : Rp 230.606</div>
+<div class="price-item">2400 + 108 : Rp 458.146</div>
+<div class="price-item">4000 + 180 : Rp 755.685</div>
+<div class="price-item">8000 + 360 : Rp 1.501.510</div>
+</div>
+
+<!-- PUBG -->
+<div class="page" id="pubg">
+<div class="back" onclick="backHome()">← Kembali</div>
+<div class="price-title">PUBG MOBILE</div>
+<div class="price-item">60 UC : Rp 15.763</div>
+<div class="price-item">300 + 25 : Rp 76.110</div>
+<div class="price-item">600 + 60 : Rp 159.031</div>
+<div class="price-item">1500 + 300 : Rp 384.062</div>
+<div class="price-item">3000 + 850 : Rp 765.154</div>
+<div class="price-item">6000 + 2100 : Rp 1.513.277</div>
+</div>
+
+<!-- SUPER SUS -->
+<div class="page" id="supersus">
+<div class="back" onclick="backHome()">← Kembali</div>
+<div class="price-title">SUPER SUS</div>
+<div class="price-item">Weekly Card : Rp 12.731</div>
+<div class="price-item">Super Pass : Rp 62.142</div>
+<div class="price-item">Super Pass Bundle : Rp 129.713</div>
+<div class="price-item">Monthly Card : Rp 151.166</div>
+<div class="price-item">Super VIP Card : Rp 169.911</div>
+<div class="price-item">100 Golden Star : Rp 11.703</div>
+<div class="price-item">310 Golden Star : Rp 34.504</div>
+<div class="price-item">520 Golden Star : Rp 55.757</div>
+<div class="price-item">1060 Golden Star : Rp 115.364</div>
+<div class="price-item">2180 Golden Star : Rp 220.729</div>
+<div class="price-item">5600 Golden Star : Rp 541.973</div>
+</div>
+
+<!-- ROBLOX -->
+<div class="page" id="roblox">
+<div class="back" onclick="backHome()">← Kembali</div>
+<div class="price-title">ROBLOX</div>
+
+<div class="section">GAMEPASS (5 HARI)</div>
+<div class="price-item">100 Robux : Rp 12.900</div>
+<div class="price-item">200 Robux : Rp 26.800</div>
+<div class="price-item">300 Robux : Rp 38.700</div>
+<div class="price-item">400 Robux : Rp 50.600</div>
+<div class="price-item">500 Robux : Rp 62.200</div>
+<div class="price-item">600 Robux : Rp 73.800</div>
+<div class="price-item">700 Robux : Rp 85.600</div>
+<div class="price-item">800 Robux : Rp 97.400</div>
+<div class="price-item">900 Robux : Rp 116.200</div>
+<div class="price-item">1000 Robux : Rp 128.000</div>
+<div class="price-item">1500 Robux : Rp 188.500</div>
+<div class="price-item">2000 Robux : Rp 246.000</div>
+<div class="price-item">2500 Robux : Rp 307.500</div>
+<div class="price-item">3000 Robux : Rp 369.000</div>
+<div class="price-item">3500 Robux : Rp 431.500</div>
+<div class="price-item">4000 Robux : Rp 487.000</div>
+<div class="price-item">4500 Robux : Rp 555.500</div>
+<div class="price-item">5000 Robux : Rp 610.000</div>
+<div class="price-item">10000 Robux : Rp 1.210.000</div>
+<div class="price-item">20000 Robux : Rp 2.390.000</div>
+
+<div class="section">ROBLOX GLOBAL - INSTAN</div>
+<div class="price-item">100 Robux : Rp 45.365</div>
+<div class="price-item">800 Robux : Rp 150.901</div>
+<div class="price-item">2000 Robux : Rp 364.068</div>
+<div class="price-item">4500 Robux : Rp 734.589</div>
+<div class="price-item">10000 Robux : Rp 1.515.360</div>
+
+<div class="section">ROBLOX GIFT CARD IDR</div>
+<div class="price-item">IDR 50K : Rp 46.438</div>
+<div class="price-item">IDR 65K : Rp 61.967</div>
+<div class="price-item">IDR 100K : Rp 91.800</div>
+<div class="price-item">IDR 100K x2 : Rp 189.000</div>
+<div class="price-item">IDR 300K : Rp 275.670</div>
+<div class="price-item">IDR 380K : Rp 387.345</div>
+<div class="price-item">IDR 500K : Rp 461.700</div>
+<div class="price-item">IDR 950K : Rp 949.918</div>
+
+<div class="section">ROBLOX GIFT CARD USD</div>
+<div class="price-item">USD 10 Global : Rp 160.190</div>
+<div class="price-item">USD 25 Global : Rp 394.787</div>
+<div class="price-item">USD 50 Global : Rp 775.710</div>
+
+<div class="price-item">Catatan: Harga Robux Bisa Kustom, Minimal Beli 50 Robux. Untuk Robux Gamepass, Pembeli Membuat Gamepass Sendiri.</div>
+</div>
+
+<script>
+function openPage(id){
+ document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+ document.getElementById(id).classList.add('active');
+}
+function backHome(){
+ document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+ document.getElementById('home').classList.add('active');
+}
+</script>
+
 </body>
-</html>
+  </html>
