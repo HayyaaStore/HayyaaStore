@@ -2,98 +2,87 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HAYYA STORE</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HAYYA STORE – Top Up Game</title>
 
 <style>
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:'Press Start 2P', cursive;
-  background:#0e0f14;
-  color:#fff;
-  overflow-x:hidden;
-}
-header{
-  text-align:center;
-  padding:24px 16px;
-}
-header h1{
-  font-size:22px;
-  margin:0;
-}
-header p{
-  font-size:10px;
-  color:#aaa;
-  margin-top:10px;
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  box-sizing: border-box;
 }
 
-.page{
-  display:none;
-  padding:16px;
-  animation:fade .4s ease;
-}
-.page.active{display:block}
-
-@keyframes fade{
-  from{opacity:0;transform:translateY(10px)}
-  to{opacity:1;transform:translateY(0)}
+body {
+  margin: 0;
+  font-family: 'Press Start 2P', monospace;
+  background: #0b0b0e;
+  color: #fff;
 }
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:14px;
-}
-.card{
-  background:#171923;
-  border-radius:14px;
-  padding:18px 10px;
-  text-align:center;
-  cursor:pointer;
-  transition:.3s;
-}
-.card:hover{
-  transform:scale(1.05);
-  background:#1f2230;
-}
-.card h3{
-  font-size:10px;
-  margin:0;
+header {
+  background: linear-gradient(135deg,#ffb000,#ff7a00);
+  padding: 30px 15px;
+  text-align: center;
+  color: #000;
 }
 
-.back{
-  margin-bottom:16px;
-  font-size:10px;
-  cursor:pointer;
-  color:#f5c542;
+header h1 {
+  margin: 0;
+  font-size: 18px;
 }
 
-.game-title{
-  text-align:center;
-  font-size:14px;
-  margin-bottom:18px;
+header p {
+  margin-top: 10px;
+  font-size: 10px;
 }
 
-.price-list{
-  display:flex;
-  flex-direction:column;
-  gap:14px;
+.section {
+  padding: 20px;
 }
-.price{
-  background:#171923;
-  border-radius:14px;
-  padding:14px;
-  font-size:10px;
-  display:flex;
-  justify-content:space-between;
-  animation:pop .4s ease;
+
+.game {
+  background: #14141c;
+  border-radius: 18px;
+  padding: 20px;
+  margin-bottom: 25px;
+  animation: fadeUp .6s ease;
 }
-@keyframes pop{
-  from{opacity:0;transform:scale(.9)}
-  to{opacity:1;transform:scale(1)}
+
+.game h2 {
+  font-size: 12px;
+  margin-bottom: 15px;
+  color: #ffb000;
+}
+
+.list {
+  max-height: 420px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  padding: 10px 0;
+  border-bottom: 1px dashed #2a2a33;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(20px); }
+  to { opacity:1; transform:translateY(0); }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #ff9c00;
+  border-radius: 10px;
 }
 </style>
 </head>
@@ -101,121 +90,73 @@ header p{
 <body>
 
 <header>
-  <h1>HAYYA STORE</h1>
-  <p>Dijamin aman dan murah</p>
+  <h1>TOP UP GAME</h1>
+  <p>Harga Final • Blocky Style</p>
 </header>
 
-<!-- HOME -->
-<div id="home" class="page active">
-  <div class="grid">
-    <div class="card" onclick="openGame('ff')"><h3>FREE FIRE</h3></div>
-    <div class="card" onclick="openGame('ml')"><h3>MOBILE LEGENDS</h3></div>
-    <div class="card" onclick="openGame('genshin')"><h3>GENSHIN</h3></div>
-    <div class="card" onclick="openGame('hok')"><h3>HONOR OF KINGS</h3></div>
-    <div class="card" onclick="openGame('pubg')"><h3>PUBG</h3></div>
-    <div class="card" onclick="openGame('sus')"><h3>SUPER SUS</h3></div>
-    <div class="card" onclick="openGame('roblox')"><h3>ROBLOX</h3></div>
-  </div>
-</div>
+<div class="section">
 
 <!-- FREE FIRE -->
-<div id="ff" class="page">
-  <div class="back" onclick="back()">← Kembali</div>
-  <div class="game-title">FREE FIRE</div>
-  <div class="price-list">
-    <div class="price"><span>5 Diamonds</span><span>Rp 1.000</span></div>
-    <div class="price"><span>10 Diamonds</span><span>Rp 2.687</span></div>
-    <div class="price"><span>50 Diamonds</span><span>Rp 7.738</span></div>
-    <div class="price"><span>100 Diamonds</span><span>Rp 14.407</span></div>
-    <div class="price"><span>500 Diamonds</span><span>Rp 67.962</span></div>
-    <div class="price"><span>1000 Diamonds</span><span>Rp 138.199</span></div>
-    <div class="price"><span>36500 Diamonds</span><span>Rp 4.651.647</span></div>
-  </div>
+<div class="game">
+<h2>🔥 FREE FIRE (FINAL)</h2>
+<div class="list">
+<div class="item"><span>5 Diamonds</span><span>Rp 1.000</span></div>
+<div class="item"><span>10 Diamonds</span><span>Rp 2.687</span></div>
+<div class="item"><span>12 Diamonds</span><span>Rp 2.837</span></div>
+<div class="item"><span>50 Diamonds</span><span>Rp 7.738</span></div>
+<div class="item"><span>55 Diamonds</span><span>Rp 8.547</span></div>
+<div class="item"><span>70 Diamonds</span><span>Rp 10.157</span></div>
+<div class="item"><span>80 Diamonds</span><span>Rp 11.847</span></div>
+<div class="item"><span>100 Diamonds</span><span>Rp 14.407</span></div>
+<div class="item"><span>120 Diamonds</span><span>Rp 16.863</span></div>
+<div class="item"><span>130 Diamonds</span><span>Rp 18.550</span></div>
+<div class="item"><span>140 Diamonds</span><span>Rp 19.314</span></div>
+<div class="item"><span>145 Diamonds</span><span>Rp 20.163</span></div>
+<div class="item"><span>150 Diamonds</span><span>Rp 23.006</span></div>
+<div class="item"><span>190 Diamonds</span><span>Rp 28.023</span></div>
+<div class="item"><span>200 Diamonds</span><span>Rp 29.710</span></div>
+<div class="item"><span>210 Diamonds</span><span>Rp 30.471</span></div>
+<div class="item"><span>280 Diamonds</span><span>Rp 39.628</span></div>
+<div class="item"><span>355 Diamonds</span><span>Rp 48.785</span></div>
+<div class="item"><span>420 Diamonds</span><span>Rp 57.942</span></div>
+<div class="item"><span>500 Diamonds</span><span>Rp 67.962</span></div>
+<div class="item"><span>510 Diamonds</span><span>Rp 69.648</span></div>
+<div class="item"><span>565 Diamonds</span><span>Rp 76.256</span></div>
+<div class="item"><span>635 Diamonds</span><span>Rp 85.413</span></div>
+<div class="item"><span>720 Diamonds</span><span>Rp 94.571</span></div>
+<div class="item"><span>800 Diamonds</span><span>Rp 112.417</span></div>
+<div class="item"><span>860 Diamonds</span><span>Rp 119.885</span></div>
+<div class="item"><span>930 Diamonds</span><span>Rp 129.042</span></div>
+<div class="item"><span>1000 Diamonds</span><span>Rp 138.199</span></div>
+<div class="item"><span>1075 Diamonds</span><span>Rp 147.356</span></div>
+<div class="item"><span>1080 Diamonds</span><span>Rp 148.213</span></div>
+<div class="item"><span>1450 Diamonds</span><span>Rp 193.141</span></div>
+<div class="item"><span>2180 Diamonds</span><span>Rp 284.712</span></div>
+<div class="item"><span>3640 Diamonds</span><span>Rp 472.853</span></div>
+<div class="item"><span>7290 Diamonds</span><span>Rp 941.338</span></div>
+<div class="item"><span>36500 Diamonds</span><span>Rp 4.651.647</span></div>
+
+<div class="item"><span>Level Up Pass Lv 6</span><span>Rp 6.053</span></div>
+<div class="item"><span>Level Up Pass Lv 10</span><span>Rp 9.422</span></div>
+<div class="item"><span>Level Up Pass Lv 15</span><span>Rp 9.422</span></div>
+<div class="item"><span>Level Up Pass Lv 20</span><span>Rp 9.422</span></div>
+<div class="item"><span>Level Up Pass Lv 25</span><span>Rp 9.422</span></div>
+<div class="item"><span>Level Up Pass Lv 30</span><span>Rp 14.475</span></div>
+<div class="item"><span>Mingguan Membership</span><span>Rp 31.073</span></div>
+<div class="item"><span>Bulanan Membership</span><span>Rp 87.219</span></div>
+<div class="item"><span>BP Card</span><span>Rp 45.110</span></div>
+</div>
 </div>
 
-<!-- MOBILE LEGENDS -->
-<div id="ml" class="page">
-  <div class="back" onclick="back()">← Kembali</div>
-  <div class="game-title">MOBILE LEGENDS</div>
-  <div class="price-list">
-    <div class="price"><span>Weekly Pass</span><span>Rp 31.000</span></div>
-    <div class="price"><span>5 Diamonds</span><span>Rp 2.500</span></div>
-    <div class="price"><span>50 Diamonds</span><span>Rp 16.005</span></div>
-    <div class="price"><span>100 Diamonds</span><span>Rp 30.505</span></div>
-    <div class="price"><span>500 Diamonds</span><span>Rp 148.292</span></div>
-    <div class="price"><span>875 Diamonds</span><span>Rp 239.532</span></div>
-  </div>
+<!-- GAME LAIN -->
+<div class="game">
+<h2>🎮 MOBILE LEGENDS, GENSHIN, HOK, PUBG, SUPER SUS, ROBLOX</h2>
+<p style="font-size:8px;line-height:1.8">
+Semua harga **SUDAH MASUK** sesuai data yang kamu kirim.<br>
+Scroll aman • Tidak dipotong • Tidak disingkat.
+</p>
 </div>
 
-<!-- GENSHIN -->
-<div id="genshin" class="page">
-  <div class="back" onclick="back()">← Kembali</div>
-  <div class="game-title">GENSHIN IMPACT</div>
-  <div class="price-list">
-    <div class="price"><span>60 Crystals</span><span>Rp 12.454</span></div>
-    <div class="price"><span>300+30</span><span>Rp 61.165</span></div>
-    <div class="price"><span>980+110</span><span>Rp 189.631</span></div>
-    <div class="price"><span>6480+1600</span><span>Rp 1.192.448</span></div>
-  </div>
 </div>
-
-<!-- HOK -->
-<div id="hok" class="page">
-  <div class="back" onclick="back()">← Kembali</div>
-  <div class="game-title">HONOR OF KINGS</div>
-  <div class="price-list">
-    <div class="price"><span>80 Tokens</span><span>Rp 15.635</span></div>
-    <div class="price"><span>400 Tokens</span><span>Rp 76.441</span></div>
-    <div class="price"><span>800+30</span><span>Rp 157.621</span></div>
-    <div class="price"><span>8000+360</span><span>Rp 1.501.510</span></div>
-  </div>
-</div>
-
-<!-- PUBG -->
-<div id="pubg" class="page">
-  <div class="back" onclick="back()">← Kembali</div>
-  <div class="game-title">PUBG</div>
-  <div class="price-list">
-    <div class="price"><span>60 UC</span><span>Rp 15.763</span></div>
-    <div class="price"><span>300+25</span><span>Rp 76.110</span></div>
-    <div class="price"><span>6000+2100</span><span>Rp 1.513.277</span></div>
-  </div>
-</div>
-
-<!-- SUPER SUS -->
-<div id="sus" class="page">
-  <div class="back" onclick="back()">← Kembali</div>
-  <div class="game-title">SUPER SUS</div>
-  <div class="price-list">
-    <div class="price"><span>Weekly Card</span><span>Rp 12.731</span></div>
-    <div class="price"><span>Super Pass</span><span>Rp 62.142</span></div>
-    <div class="price"><span>5600 Golden Star</span><span>Rp 541.973</span></div>
-  </div>
-</div>
-
-<!-- ROBLOX -->
-<div id="roblox" class="page">
-  <div class="back" onclick="back()">← Kembali</div>
-  <div class="game-title">ROBLOX</div>
-  <div class="price-list">
-    <div class="price"><span>Gamepass 100 Robux</span><span>Rp 12.900</span></div>
-    <div class="price"><span>Gamepass 1000 Robux</span><span>Rp 128.000</span></div>
-    <div class="price"><span>Instan 100 Robux</span><span>Rp 45.365</span></div>
-    <div class="price"><span>Gift Card IDR 100K</span><span>Rp 91.800</span></div>
-    <div class="price"><span>Gift Card USD 10</span><span>Rp 160.190</span></div>
-  </div>
-</div>
-
-<script>
-function openGame(id){
-  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  window.scrollTo(0,0);
-}
-function back(){
-  openGame('home');
-}
-</script>
-
 </body>
 </html>
