@@ -4,23 +4,58 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>HAYYA STORE</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:'Press Start 2P',cursive;background:#0e0f14;color:#fff}
-header{text-align:center;padding:24px 16px}
-header h1{font-size:22px;margin:0}
-header p{font-size:10px;color:#aaa;margin-top:10px}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;padding:16px}
-.card{
-  background:#171923;border-radius:14px;padding:18px 10px;
-  text-align:center;cursor:pointer;transition:.3s
+body{
+  margin:0;
+  font-family:'Press Start 2P', cursive;
+  background:#0e0f14;
+  color:#fff;
+  overflow-x:hidden;
 }
-.card:hover{transform:scale(1.05);background:#1f2230}
-.card h3{font-size:10px;margin:0}
-a{text-decoration:none;color:inherit}
+header{
+  text-align:center;
+  padding:24px 16px;
+}
+header h1{
+  font-size:22px;
+  margin:0;
+}
+header p{
+  font-size:10px;
+  color:#aaa;
+  margin-top:10px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+  padding:16px;
+}
+.card{
+  background:#171923;
+  border-radius:14px;
+  padding:18px 10px;
+  text-align:center;
+  cursor:pointer;
+  transition:.3s;
+}
+.card:hover{
+  transform:scale(1.05);
+  background:#1f2230;
+}
+.card h3{
+  font-size:10px;
+  margin:0;
+}
+a{color:inherit;text-decoration:none}
 </style>
 </head>
+
 <body>
 
 <header>
@@ -29,13 +64,13 @@ a{text-decoration:none;color:inherit}
 </header>
 
 <div class="grid">
-  <a href="freefire.html" class="card"><h3>FREE FIRE</h3></a>
-  <a href="ml.html" class="card"><h3>MOBILE LEGENDS</h3></a>
-  <a href="genshin.html" class="card"><h3>GENSHIN</h3></a>
-  <a href="hok.html" class="card"><h3>HONOR OF KINGS</h3></a>
-  <a href="pubg.html" class="card"><h3>PUBG</h3></a>
-  <a href="sus.html" class="card"><h3>SUPER SUS</h3></a>
-  <a href="roblox.html" class="card"><h3>ROBLOX</h3></a>
+  <a href="games/freefire.html"><div class="card"><h3>FREE FIRE</h3></div></a>
+  <a href="games/ml.html"><div class="card"><h3>MOBILE LEGENDS</h3></div></a>
+  <a href="games/genshin.html"><div class="card"><h3>GENSHIN IMPACT</h3></div></a>
+  <a href="games/hok.html"><div class="card"><h3>HONOR OF KINGS</h3></div></a>
+  <a href="games/pubg.html"><div class="card"><h3>PUBG MOBILE</h3></div></a>
+  <a href="games/sus.html"><div class="card"><h3>SUPER SUS</h3></div></a>
+  <a href="games/roblox.html"><div class="card"><h3>ROBLOX</h3></div></a>
 </div>
 
 </body>
