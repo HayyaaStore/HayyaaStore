@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SUPER SUS - HAYYA STORE</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:'Press Start 2P', cursive;
+  background:#0e0f14;
+  color:#fff;
+  overflow-x:hidden;
+}
+header{
+  text-align:center;
+  padding:24px 16px;
+}
+header h1{
+  font-size:18px;
+  margin:0;
+}
+header p{
+  font-size:10px;
+  color:#aaa;
+  margin-top:10px;
+}
+
+.back{
+  margin:16px;
+  font-size:10px;
+  cursor:pointer;
+  color:#f5c542;
+}
+
+.game-title{
+  text-align:center;
+  font-size:14px;
+  margin-bottom:18px;
+}
+
+.price-list{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  padding:0 16px;
+}
+.price{
+  background:#171923;
+  border-radius:12px;
+  padding:12px;
+  font-size:10px;
+  display:flex;
+  justify-content:space-between;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>SUPER SUS</h1>
+  <p>HAYYA STORE - Harga Final</p>
+</header>
+
+<div class="back" onclick="goBack()">← Kembali</div>
+
+<div class="game-title">SUPER SUS ITEMS</div>
+<div class="price-list">
+  <div class="price"><span>Weekly Card</span><span>Rp 12.731</span></div>
+  <div class="price"><span>Super Pass</span><span>Rp 62.142</span></div>
+  <div class="price"><span>Super Pass Bundle</span><span>Rp 129.713</span></div>
+  <div class="price"><span>Monthly Card</span><span>Rp 151.166</span></div>
+  <div class="price"><span>Super VIP Card</span><span>Rp 169.911</span></div>
+  <div class="price"><span>100 Golden Star</span><span>Rp 11.703</span></div>
+  <div class="price"><span>310 Golden Star</span><span>Rp 34.504</span></div>
+  <div class="price"><span>520 Golden Star</span><span>Rp 55.757</span></div>
+  <div class="price"><span>1060 Golden Star</span><span>Rp 115.364</span></div>
+  <div class="price"><span>2180 Golden Star</span><span>Rp 220.729</span></div>
+  <div class="price"><span>5600 Golden Star</span><span>Rp 541.973</span></div>
+</div>
+
+<script>
+function goBack(){
+  window.history.back();
+}
+</script>
+
+</body>
+</html>
