@@ -30,11 +30,22 @@ header p{
   margin-top:10px;
 }
 
+.page{
+  display:none;
+  padding:16px;
+  animation:fade .4s ease;
+}
+.page.active{display:block}
+
+@keyframes fade{
+  from{opacity:0;transform:translateY(10px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
 .grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:14px;
-  padding:0 16px;
 }
 .card{
   background:#171923;
@@ -63,14 +74,16 @@ header p{
 </header>
 
 <!-- HOME -->
-<div class="grid">
-  <div class="card" onclick="openGame('ff.html')"><h3>FREE FIRE</h3></div>
-  <div class="card" onclick="openGame('ml.html')"><h3>MOBILE LEGENDS</h3></div>
-  <div class="card" onclick="openGame('genshin.html')"><h3>GENSHIN</h3></div>
-  <div class="card" onclick="openGame('hok.html')"><h3>HONOR OF KINGS</h3></div>
-  <div class="card" onclick="openGame('pubg.html')"><h3>PUBG</h3></div>
-  <div class="card" onclick="openGame('sus.html')"><h3>SUPER SUS</h3></div>
-  <div class="card" onclick="openGame('roblox.html')"><h3>ROBLOX</h3></div>
+<div id="home" class="page active">
+  <div class="grid">
+    <div class="card" onclick="openGame('games/ff.html')"><h3>FREE FIRE</h3></div>
+    <div class="card" onclick="openGame('games/ml.html')"><h3>MOBILE LEGENDS</h3></div>
+    <div class="card" onclick="openGame('games/genshin.html')"><h3>GENSHIN</h3></div>
+    <div class="card" onclick="openGame('games/hok.html')"><h3>HONOR OF KINGS</h3></div>
+    <div class="card" onclick="openGame('games/pubg.html')"><h3>PUBG</h3></div>
+    <div class="card" onclick="openGame('games/sus.html')"><h3>SUPER SUS</h3></div>
+    <div class="card" onclick="openGame('games/roblox.html')"><h3>ROBLOX</h3></div>
+  </div>
 </div>
 
 <script>
