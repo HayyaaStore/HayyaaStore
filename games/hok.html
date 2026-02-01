@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HONOR OF KINGS - HAYYA STORE</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:'Press Start 2P', cursive;
+  background:#0e0f14;
+  color:#fff;
+  overflow-x:hidden;
+}
+header{
+  text-align:center;
+  padding:24px 16px;
+}
+header h1{
+  font-size:18px;
+  margin:0;
+}
+header p{
+  font-size:10px;
+  color:#aaa;
+  margin-top:10px;
+}
+
+.back{
+  margin:16px;
+  font-size:10px;
+  cursor:pointer;
+  color:#f5c542;
+}
+
+.game-title{
+  text-align:center;
+  font-size:14px;
+  margin-bottom:18px;
+}
+
+.price-list{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  padding:0 16px;
+}
+.price{
+  background:#171923;
+  border-radius:12px;
+  padding:12px;
+  font-size:10px;
+  display:flex;
+  justify-content:space-between;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>HONOR OF KINGS</h1>
+  <p>HAYYA STORE - Harga Final</p>
+</header>
+
+<div class="back" onclick="goBack()">← Kembali</div>
+
+<div class="game-title">TOKENS & BUNDLES</div>
+<div class="price-list">
+  <div class="price"><span>16 Tokens</span><span>Rp 3.956</span></div>
+  <div class="price"><span>80 Tokens</span><span>Rp 15.635</span></div>
+  <div class="price"><span>240 Tokens</span><span>Rp 47.008</span></div>
+  <div class="price"><span>400 Tokens</span><span>Rp 76.441</span></div>
+  <div class="price"><span>560 Tokens</span><span>Rp 112.874</span></div>
+  <div class="price"><span>800+30</span><span>Rp 157.621</span></div>
+  <div class="price"><span>1200+45</span><span>Rp 230.606</span></div>
+  <div class="price"><span>2400+108</span><span>Rp 458.146</span></div>
+  <div class="price"><span>4000+180</span><span>Rp 755.685</span></div>
+  <div class="price"><span>8000+360</span><span>Rp 1.501.510</span></div>
+</div>
+
+<script>
+function goBack(){
+  window.history.back();
+}
+</script>
+
+</body>
+</html>
