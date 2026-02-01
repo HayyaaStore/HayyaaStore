@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PUBG - HAYYA STORE</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:'Press Start 2P', cursive;
+  background:#0e0f14;
+  color:#fff;
+  overflow-x:hidden;
+}
+header{
+  text-align:center;
+  padding:24px 16px;
+}
+header h1{
+  font-size:18px;
+  margin:0;
+}
+header p{
+  font-size:10px;
+  color:#aaa;
+  margin-top:10px;
+}
+
+.back{
+  margin:16px;
+  font-size:10px;
+  cursor:pointer;
+  color:#f5c542;
+}
+
+.game-title{
+  text-align:center;
+  font-size:14px;
+  margin-bottom:18px;
+}
+
+.price-list{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  padding:0 16px;
+}
+.price{
+  background:#171923;
+  border-radius:12px;
+  padding:12px;
+  font-size:10px;
+  display:flex;
+  justify-content:space-between;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>PUBG</h1>
+  <p>HAYYA STORE - Harga Final</p>
+</header>
+
+<div class="back" onclick="goBack()">← Kembali</div>
+
+<div class="game-title">UC & BUNDLES</div>
+<div class="price-list">
+  <div class="price"><span>60 UC</span><span>Rp 15.763</span></div>
+  <div class="price"><span>300+25 UC</span><span>Rp 76.110</span></div>
+  <div class="price"><span>600+60 UC</span><span>Rp 159.031</span></div>
+  <div class="price"><span>1500+300 UC</span><span>Rp 384.062</span></div>
+  <div class="price"><span>3000+850 UC</span><span>Rp 765.154</span></div>
+  <div class="price"><span>6000+2100 UC</span><span>Rp 1.513.277</span></div>
+</div>
+
+<script>
+function goBack(){
+  window.history.back();
+}
+</script>
+
+</body>
+</html>
