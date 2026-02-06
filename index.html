@@ -36,11 +36,9 @@ header p{
 
 /* PAGE */
 .page{
-  display:none;
   padding:16px;
   animation:fade .4s ease;
 }
-.page.active{display:block}
 
 @keyframes fade{
   from{opacity:0;transform:translateY(10px)}
@@ -62,16 +60,15 @@ header p{
   text-align:center;
   cursor:pointer;
   transition:.25s;
-  color:#ffb300; /* kuning ke-oranye */
-  position:relative;
+  color:#ffb300;
 }
 .card:hover{
   transform:scale(1.05);
   background:#1f2230;
 }
 .card:active{
-  transform:scale(0.93);
-  box-shadow:0 0 12px rgba(255,179,0,.6);
+  transform:scale(0.92);
+  box-shadow:0 0 14px rgba(255,179,0,.7);
 }
 
 .card h3{
@@ -88,40 +85,24 @@ header p{
   <p>Top Up Game • Aman & Cepat</p>
 </header>
 
-<!-- HOME -->
-<div id="home" class="page active">
+<div class="page">
   <div class="grid">
-    <div class="card" onclick="openGame('games/ff.html')">
-      <h3>🔥 FREE FIRE</h3>
-    </div>
-    <div class="card" onclick="openGame('games/ml.html')">
-      <h3>🎮 MOBILE LEGENDS</h3>
-    </div>
-    <div class="card" onclick="openGame('games/genshin.html')">
-      <h3>✨ GENSHIN IMPACT</h3>
-    </div>
-    <div class="card" onclick="openGame('games/hok.html')">
-      <h3>👑 HONOR OF KINGS</h3>
-    </div>
-    <div class="card" onclick="openGame('games/pubg.html')">
-      <h3>🔫 PUBG MOBILE</h3>
-    </div>
-    <div class="card" onclick="openGame('games/sus.html')">
-      <h3>🕵️ SUPER SUS</h3>
-    </div>
-    <div class="card" onclick="openGame('games/roblox.html')">
-      <h3>🧱 ROBLOX</h3>
-    </div>
+    <div class="card" onclick="openGame('games/ff.html')"><h3>🔥 FREE FIRE</h3></div>
+    <div class="card" onclick="openGame('games/ml.html')"><h3>🎮 MOBILE LEGENDS</h3></div>
+    <div class="card" onclick="openGame('games/genshin.html')"><h3>✨ GENSHIN IMPACT</h3></div>
+    <div class="card" onclick="openGame('games/hok.html')"><h3>👑 HONOR OF KINGS</h3></div>
+    <div class="card" onclick="openGame('games/pubg.html')"><h3>🔫 PUBG MOBILE</h3></div>
+    <div class="card" onclick="openGame('games/sus.html')"><h3>🕵️ SUPER SUS</h3></div>
+    <div class="card" onclick="openGame('games/roblox.html')"><h3>🧱 ROBLOX</h3></div>
   </div>
 </div>
 
 <script>
 function openGame(file){
-  // efek klik halus
-  document.body.style.pointerEvents = "none";
-  setTimeout(()=>{
+  // delay kecil biar animasi klik kerasa
+  setTimeout(() => {
     window.location.href = file;
-  },120);
+  }, 120);
 }
 </script>
 
