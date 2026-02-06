@@ -16,20 +16,25 @@ body{
   color:#fff;
   overflow-x:hidden;
 }
+
+/* HEADER */
 header{
   text-align:center;
-  padding:24px 16px;
+  padding:26px 16px;
+  background:linear-gradient(135deg,#ffcc00,#ff9800);
 }
 header h1{
   font-size:22px;
   margin:0;
+  color:#000;
 }
 header p{
   font-size:10px;
-  color:#aaa;
+  color:#3b2a00;
   margin-top:10px;
 }
 
+/* PAGE */
 .page{
   display:none;
   padding:16px;
@@ -42,23 +47,33 @@ header p{
   to{opacity:1;transform:translateY(0)}
 }
 
+/* GRID */
 .grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:14px;
 }
+
+/* CARD */
 .card{
   background:#171923;
   border-radius:14px;
   padding:18px 10px;
   text-align:center;
   cursor:pointer;
-  transition:.3s;
+  transition:.25s;
+  color:#ffb300; /* kuning ke-oranye */
+  position:relative;
 }
 .card:hover{
   transform:scale(1.05);
   background:#1f2230;
 }
+.card:active{
+  transform:scale(0.93);
+  box-shadow:0 0 12px rgba(255,179,0,.6);
+}
+
 .card h3{
   font-size:10px;
   margin:0;
@@ -69,26 +84,44 @@ header p{
 <body>
 
 <header>
-  <h1>HAYYA STORE</h1>
-  <p>Dijamin aman dan murah</p>
+  <h1>🔥 HAYYA STORE 🔥</h1>
+  <p>Top Up Game • Aman & Cepat</p>
 </header>
 
 <!-- HOME -->
 <div id="home" class="page active">
   <div class="grid">
-    <div class="card" onclick="openGame('games/ff.html')"><h3>FREE FIRE</h3></div>
-    <div class="card" onclick="openGame('games/ml.html')"><h3>MOBILE LEGENDS</h3></div>
-    <div class="card" onclick="openGame('games/genshin.html')"><h3>GENSHIN</h3></div>
-    <div class="card" onclick="openGame('games/hok.html')"><h3>HONOR OF KINGS</h3></div>
-    <div class="card" onclick="openGame('games/pubg.html')"><h3>PUBG</h3></div>
-    <div class="card" onclick="openGame('games/sus.html')"><h3>SUPER SUS</h3></div>
-    <div class="card" onclick="openGame('games/roblox.html')"><h3>ROBLOX</h3></div>
+    <div class="card" onclick="openGame('games/ff.html')">
+      <h3>🔥 FREE FIRE</h3>
+    </div>
+    <div class="card" onclick="openGame('games/ml.html')">
+      <h3>🎮 MOBILE LEGENDS</h3>
+    </div>
+    <div class="card" onclick="openGame('games/genshin.html')">
+      <h3>✨ GENSHIN IMPACT</h3>
+    </div>
+    <div class="card" onclick="openGame('games/hok.html')">
+      <h3>👑 HONOR OF KINGS</h3>
+    </div>
+    <div class="card" onclick="openGame('games/pubg.html')">
+      <h3>🔫 PUBG MOBILE</h3>
+    </div>
+    <div class="card" onclick="openGame('games/sus.html')">
+      <h3>🕵️ SUPER SUS</h3>
+    </div>
+    <div class="card" onclick="openGame('games/roblox.html')">
+      <h3>🧱 ROBLOX</h3>
+    </div>
   </div>
 </div>
 
 <script>
 function openGame(file){
-  window.location.href = file;
+  // efek klik halus
+  document.body.style.pointerEvents = "none";
+  setTimeout(()=>{
+    window.location.href = file;
+  },120);
 }
 </script>
 
