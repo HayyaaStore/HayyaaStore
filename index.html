@@ -75,6 +75,28 @@ header p{
   font-size:10px;
   margin:0;
 }
+
+/* ===== TAMBAHAN SECTION ===== */
+.info-section{
+  margin-top:40px;
+  font-size:9px;
+  line-height:1.8;
+}
+
+.info-section h2{
+  font-size:10px;
+  color:#ffb300;
+  margin-bottom:12px;
+}
+
+.info-section a{
+  color:#ffcc00;
+  text-decoration:none;
+}
+
+.info-section a:hover{
+  text-decoration:underline;
+}
 </style>
 </head>
 
@@ -95,11 +117,54 @@ header p{
     <div class="card" onclick="openGame('games/sus.html')"><h3>🕵️ SUPER SUS</h3></div>
     <div class="card" onclick="openGame('games/roblox.html')"><h3>🧱 ROBLOX</h3></div>
   </div>
+
+  <!-- ========================= -->
+  <!-- TAMBAHAN SESUAI PERMINTAAN -->
+  <!-- ========================= -->
+
+  <div class="info-section">
+
+    <h2>List Harga 👇</h2>
+
+    <h2>📌 INFORMASI PENTING</h2>
+    <p>📌 Kirim ID & Nickname dengan benar</p>
+    <p>🟢 Online 09.00 – 21.00 WIB</p>
+    <p>🔴 Di luar jam tersebut diproses esok hari</p>
+    <p>📅 Buka Senin - Khamis</p>
+
+    <h2>💳 PAYMENT</h2>
+    <p>• DANA</p>
+    <p>• GoPay</p>
+
+    <h2>❓ FAQ</h2>
+    <p><strong>Q: Perlu login akun?</strong><br>
+    A: Tidak, cukup kirim ID & Nickname.</p>
+
+    <p><strong>Q: Berapa lama proses?</strong><br>
+    A: Maksimal 5 hari setelah pembayaran dikonfirmasi.</p>
+
+    <p><strong>Q: Bisa refund?</strong><br>
+    A: Tidak jika kesalahan berasal dari ID yang dikirim pembeli.</p>
+
+    <h2>📞 KONTAK</h2>
+    <p>📲 WhatsApp:
+      <a href="https://wa.me/6285924624105" target="_blank">
+      +62 859-2462-4105
+      </a>
+    </p>
+
+    <p>👥 Gabung Grup WhatsApp untuk promo, update harga terbaru, dan info status online store:<br>
+      <a href="https://chat.whatsapp.com/FOIYQaaRt9FIx2fk0IthbL" target="_blank">
+      Klik di sini untuk gabung grup
+      </a>
+    </p>
+
+  </div>
+
 </div>
 
 <script>
 function openGame(file){
-  // delay kecil biar animasi klik kerasa
   setTimeout(() => {
     window.location.href = file;
   }, 120);
