@@ -39,7 +39,7 @@ header p{
   padding:20px 16px;
 }
 
-/* LIST HARGA TITLE */
+/* LIST TITLE */
 .list-title{
   text-align:center;
   font-size:16px;
@@ -47,7 +47,7 @@ header p{
   margin:25px 0 30px;
 }
 
-/* GRID GAME */
+/* GRID */
 .grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
@@ -79,7 +79,7 @@ header p{
   margin:0;
 }
 
-/* SECTION BAWAH */
+/* SECTION */
 .info-section{
   font-size:13px;
   line-height:1.9;
@@ -91,19 +91,24 @@ header p{
   margin:30px 0 15px;
 }
 
-/* PAYMENT LOGO */
+/* PAYMENT */
 .payment-logos{
   display:flex;
   justify-content:center;
   align-items:center;
-  gap:50px;
+  gap:60px;
   margin:30px 0;
 }
 
-.payment-logos img{
+.logo-dana{
   width:120px;
   height:auto;
-  filter:brightness(0) invert(1);
+}
+
+.logo-gopay{
+  width:120px;
+  height:auto;
+  filter:brightness(0) invert(1); /* hanya gopay jadi putih */
 }
 </style>
 </head>
@@ -117,12 +122,12 @@ header p{
 
 <div class="page">
 
-  <!-- LIST HARGA DI BAWAH HEADER -->
+  <!-- LIST HARGA -->
   <div class="list-title">
     📜 List Harga 👇
   </div>
 
-  <!-- GRID GAME -->
+  <!-- GAME GRID -->
   <div class="grid">
     <div class="card" onclick="openGame('games/ff.html')"><h3>🔥 FREE FIRE</h3></div>
     <div class="card" onclick="openGame('games/ml.html')"><h3>🎮 MOBILE LEGENDS</h3></div>
@@ -144,8 +149,8 @@ header p{
 
     <h2>💳 PAYMENT</h2>
     <div class="payment-logos">
-      <img src="https://cdn.worldvectorlogo.com/logos/dana-1.svg" alt="DANA">
-      <img src="https://cdn.worldvectorlogo.com/logos/gopay.svg" alt="GoPay">
+      <img class="logo-dana" src="https://cdn.worldvectorlogo.com/logos/dana-1.svg" alt="DANA">
+      <img class="logo-gopay" src="https://cdn.worldvectorlogo.com/logos/gopay.svg" alt="GoPay">
     </div>
 
     <h2>📞 KONTAK</h2>
