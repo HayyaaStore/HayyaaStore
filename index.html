@@ -14,7 +14,6 @@ body{
   font-family:'Press Start 2P', cursive;
   background:#0e0f14;
   color:#fff;
-  overflow-x:hidden;
 }
 
 /* HEADER */
@@ -69,47 +68,39 @@ header p{
   transform:scale(1.05);
   background:#1f2230;
 }
-.card:active{
-  transform:scale(0.95);
-  box-shadow:0 0 14px rgba(255,179,0,.7);
-}
-
 .card h3{
   font-size:11px;
   margin:0;
 }
 
-/* SECTION */
+/* INFO */
 .info-section{
   font-size:13px;
   line-height:1.9;
 }
-
 .info-section h2{
   font-size:15px;
   color:#ffb300;
   margin:30px 0 15px;
 }
 
-/* PAYMENT APP ICON STYLE */
+/* PAYMENT */
 .payment-logos{
   display:flex;
   justify-content:center;
   align-items:center;
-  gap:50px;
+  gap:70px;
   margin:30px 0;
 }
 
 .payment-logos img{
-  width:95px;
-  height:95px;
-  border-radius:22px;   /* bikin kayak icon aplikasi */
-  box-shadow:0 0 18px rgba(255,255,255,0.15);
-  transition:0.3s;
+  width:130px;
+  height:auto;
+  transition:0.3s ease;
 }
 
 .payment-logos img:hover{
-  transform:scale(1.1);
+  transform:scale(1.08);
 }
 </style>
 </head>
@@ -128,13 +119,13 @@ header p{
   </div>
 
   <div class="grid">
-    <div class="card" onclick="openGame('games/ff.html')"><h3>🔥 FREE FIRE</h3></div>
-    <div class="card" onclick="openGame('games/ml.html')"><h3>🎮 MOBILE LEGENDS</h3></div>
-    <div class="card" onclick="openGame('games/genshin.html')"><h3>✨ GENSHIN IMPACT</h3></div>
-    <div class="card" onclick="openGame('games/hok.html')"><h3>👑 HONOR OF KINGS</h3></div>
-    <div class="card" onclick="openGame('games/pubg.html')"><h3>🔫 PUBG MOBILE</h3></div>
-    <div class="card" onclick="openGame('games/sus.html')"><h3>🕵️ SUPER SUS</h3></div>
-    <div class="card" onclick="openGame('games/roblox.html')"><h3>🧱 ROBLOX</h3></div>
+    <div class="card"><h3>🔥 FREE FIRE</h3></div>
+    <div class="card"><h3>🎮 MOBILE LEGENDS</h3></div>
+    <div class="card"><h3>✨ GENSHIN IMPACT</h3></div>
+    <div class="card"><h3>👑 HONOR OF KINGS</h3></div>
+    <div class="card"><h3>🔫 PUBG MOBILE</h3></div>
+    <div class="card"><h3>🕵️ SUPER SUS</h3></div>
+    <div class="card"><h3>🧱 ROBLOX</h3></div>
   </div>
 
   <div class="info-section">
@@ -147,11 +138,8 @@ header p{
 
     <h2>💳 PAYMENT</h2>
     <div class="payment-logos">
-      <!-- Logo DANA versi app -->
-      <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Logo_dana_blue.svg" alt="DANA">
-      
-      <!-- Logo GoPay versi app -->
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Gopay_logo.svg" alt="GoPay">
+      <img src="https://cdn.worldvectorlogo.com/logos/dana-logo.png" alt="DANA">
+      <img src="https://cdn.worldvectorlogo.com/logos/gopay-logo.png" alt="GoPay">
     </div>
 
     <h2>📞 KONTAK</h2>
@@ -180,14 +168,6 @@ header p{
   </div>
 
 </div>
-
-<script>
-function openGame(file){
-  setTimeout(() => {
-    window.location.href = file;
-  }, 120);
-}
-</script>
 
 </body>
 </html>
