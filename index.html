@@ -91,24 +91,25 @@ header p{
   margin:30px 0 15px;
 }
 
-/* PAYMENT */
+/* PAYMENT APP ICON STYLE */
 .payment-logos{
   display:flex;
   justify-content:center;
   align-items:center;
-  gap:60px;
+  gap:50px;
   margin:30px 0;
 }
 
-.logo-dana{
-  width:120px;
-  height:auto;
+.payment-logos img{
+  width:95px;
+  height:95px;
+  border-radius:22px;   /* bikin kayak icon aplikasi */
+  box-shadow:0 0 18px rgba(255,255,255,0.15);
+  transition:0.3s;
 }
 
-.logo-gopay{
-  width:120px;
-  height:auto;
-  filter:brightness(0) invert(1); /* hanya gopay jadi putih */
+.payment-logos img:hover{
+  transform:scale(1.1);
 }
 </style>
 </head>
@@ -122,12 +123,10 @@ header p{
 
 <div class="page">
 
-  <!-- LIST HARGA -->
   <div class="list-title">
     📜 List Harga 👇
   </div>
 
-  <!-- GAME GRID -->
   <div class="grid">
     <div class="card" onclick="openGame('games/ff.html')"><h3>🔥 FREE FIRE</h3></div>
     <div class="card" onclick="openGame('games/ml.html')"><h3>🎮 MOBILE LEGENDS</h3></div>
@@ -138,7 +137,6 @@ header p{
     <div class="card" onclick="openGame('games/roblox.html')"><h3>🧱 ROBLOX</h3></div>
   </div>
 
-  <!-- INFO -->
   <div class="info-section">
 
     <h2>📌 INFORMASI PENTING</h2>
@@ -149,8 +147,11 @@ header p{
 
     <h2>💳 PAYMENT</h2>
     <div class="payment-logos">
-      <img class="logo-dana" src="https://cdn.worldvectorlogo.com/logos/dana-1.svg" alt="DANA">
-      <img class="logo-gopay" src="https://cdn.worldvectorlogo.com/logos/gopay.svg" alt="GoPay">
+      <!-- Logo DANA versi app -->
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Logo_dana_blue.svg" alt="DANA">
+      
+      <!-- Logo GoPay versi app -->
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Gopay_logo.svg" alt="GoPay">
     </div>
 
     <h2>📞 KONTAK</h2>
@@ -160,7 +161,7 @@ header p{
       </a>
     </p>
 
-    <p>👥 Gabung Grup WhatsApp untuk promo, update harga terbaru, dan info status online store:<br>
+    <p>👥 Gabung Grup WhatsApp untuk promo & update terbaru:<br>
       <a href="https://chat.whatsapp.com/FOIYQaaRt9FIx2fk0IthbL" target="_blank" style="color:#ffcc00;">
       Klik di sini untuk gabung grup
       </a>
