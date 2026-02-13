@@ -36,27 +36,30 @@ header p{
 
 /* PAGE */
 .page{
-  padding:16px;
-  animation:fade .4s ease;
+  padding:20px 16px;
 }
 
-@keyframes fade{
-  from{opacity:0;transform:translateY(10px)}
-  to{opacity:1;transform:translateY(0)}
+/* LIST HARGA TITLE */
+.list-title{
+  text-align:center;
+  font-size:16px;
+  color:#ffb300;
+  margin:25px 0 30px;
 }
 
-/* GRID */
+/* GRID GAME */
 .grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
-  gap:14px;
+  gap:16px;
+  margin-bottom:50px;
 }
 
 /* CARD */
 .card{
   background:#171923;
-  border-radius:14px;
-  padding:18px 10px;
+  border-radius:16px;
+  padding:22px 10px;
   text-align:center;
   cursor:pointer;
   transition:.25s;
@@ -67,49 +70,40 @@ header p{
   background:#1f2230;
 }
 .card:active{
-  transform:scale(0.92);
+  transform:scale(0.95);
   box-shadow:0 0 14px rgba(255,179,0,.7);
 }
 
 .card h3{
-  font-size:10px;
+  font-size:11px;
   margin:0;
 }
 
-/* ===== SECTION BAWAH ===== */
+/* SECTION BAWAH */
 .info-section{
-  margin-top:40px;
   font-size:13px;
   line-height:1.9;
 }
 
 .info-section h2{
-  font-size:16px;
+  font-size:15px;
   color:#ffb300;
   margin:30px 0 15px;
 }
 
-.info-section a{
-  color:#ffcc00;
-  text-decoration:none;
-}
-
-.info-section a:hover{
-  text-decoration:underline;
-}
-
-/* PAYMENT LOGO BESAR & SEBELAHAN */
+/* PAYMENT LOGO */
 .payment-logos{
   display:flex;
   justify-content:center;
   align-items:center;
-  gap:40px;
+  gap:50px;
   margin:30px 0;
 }
 
 .payment-logos img{
-  width:110px;
+  width:120px;
   height:auto;
+  filter:brightness(0) invert(1);
 }
 </style>
 </head>
@@ -122,6 +116,13 @@ header p{
 </header>
 
 <div class="page">
+
+  <!-- LIST HARGA DI BAWAH HEADER -->
+  <div class="list-title">
+    📜 List Harga 👇
+  </div>
+
+  <!-- GRID GAME -->
   <div class="grid">
     <div class="card" onclick="openGame('games/ff.html')"><h3>🔥 FREE FIRE</h3></div>
     <div class="card" onclick="openGame('games/ml.html')"><h3>🎮 MOBILE LEGENDS</h3></div>
@@ -132,44 +133,34 @@ header p{
     <div class="card" onclick="openGame('games/roblox.html')"><h3>🧱 ROBLOX</h3></div>
   </div>
 
-  <hr style="border:0;height:1px;background:#222;margin:40px 0;">
-
+  <!-- INFO -->
   <div class="info-section">
 
-    <!-- LIST HARGA PALING ATAS -->
-    <h2>📜 List Harga 👇</h2>
-    <p>Pilih game di atas untuk melihat daftar harga lengkap.</p>
-
-    <!-- INFORMASI -->
     <h2>📌 INFORMASI PENTING</h2>
     <p>📌 Kirim ID & Nickname dengan benar</p>
     <p>🟢 Online 09.00 – 21.00 WIB</p>
     <p>🔴 Di luar jam tersebut diproses esok hari</p>
     <p>📅 Buka Senin - Khamis</p>
 
-    <!-- PAYMENT LOGO ONLY -->
     <h2>💳 PAYMENT</h2>
-
     <div class="payment-logos">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Logo_dana_blue.svg" alt="DANA">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Gopay_logo.svg/512px-Gopay_logo.svg.png" alt="GoPay">
+      <img src="https://cdn.worldvectorlogo.com/logos/dana-1.svg" alt="DANA">
+      <img src="https://cdn.worldvectorlogo.com/logos/gopay.svg" alt="GoPay">
     </div>
 
-    <!-- KONTAK -->
     <h2>📞 KONTAK</h2>
     <p>📲 WhatsApp:
-      <a href="https://wa.me/6285924624105" target="_blank">
+      <a href="https://wa.me/6285924624105" target="_blank" style="color:#ffcc00;">
       +62 859-2462-4105
       </a>
     </p>
 
     <p>👥 Gabung Grup WhatsApp untuk promo, update harga terbaru, dan info status online store:<br>
-      <a href="https://chat.whatsapp.com/FOIYQaaRt9FIx2fk0IthbL" target="_blank">
+      <a href="https://chat.whatsapp.com/FOIYQaaRt9FIx2fk0IthbL" target="_blank" style="color:#ffcc00;">
       Klik di sini untuk gabung grup
       </a>
     </p>
 
-    <!-- FAQ PALING BAWAH -->
     <h2>❓ FAQ</h2>
     <p><strong>Q: Perlu login akun?</strong><br>
     A: Tidak, cukup kirim ID & Nickname.</p>
