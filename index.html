@@ -79,14 +79,14 @@ header p{
 /* ===== SECTION BAWAH ===== */
 .info-section{
   margin-top:40px;
-  font-size:12px;
-  line-height:1.8;
+  font-size:13px;
+  line-height:1.9;
 }
 
 .info-section h2{
-  font-size:14px;
+  font-size:16px;
   color:#ffb300;
-  margin:25px 0 12px;
+  margin:30px 0 15px;
 }
 
 .info-section a{
@@ -98,16 +98,17 @@ header p{
   text-decoration:underline;
 }
 
-/* PAYMENT LOGO */
-.payment-item{
+/* PAYMENT LOGO BESAR & SEBELAHAN */
+.payment-logos{
   display:flex;
+  justify-content:center;
   align-items:center;
-  gap:12px;
-  margin:10px 0;
+  gap:40px;
+  margin:30px 0;
 }
 
-.payment-item img{
-  width:32px;
+.payment-logos img{
+  width:110px;
   height:auto;
 }
 </style>
@@ -135,27 +136,26 @@ header p{
 
   <div class="info-section">
 
+    <!-- LIST HARGA PALING ATAS -->
     <h2>📜 List Harga 👇</h2>
     <p>Pilih game di atas untuk melihat daftar harga lengkap.</p>
 
+    <!-- INFORMASI -->
     <h2>📌 INFORMASI PENTING</h2>
     <p>📌 Kirim ID & Nickname dengan benar</p>
     <p>🟢 Online 09.00 – 21.00 WIB</p>
     <p>🔴 Di luar jam tersebut diproses esok hari</p>
     <p>📅 Buka Senin - Khamis</p>
 
+    <!-- PAYMENT LOGO ONLY -->
     <h2>💳 PAYMENT</h2>
 
-    <div class="payment-item">
+    <div class="payment-logos">
       <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Logo_dana_blue.svg" alt="DANA">
-      <span>DANA</span>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Gopay_logo.svg/512px-Gopay_logo.svg.png" alt="GoPay">
     </div>
 
-    <div class="payment-item">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Gopay_logo.svg" alt="GoPay">
-      <span>GoPay</span>
-    </div>
-
+    <!-- KONTAK -->
     <h2>📞 KONTAK</h2>
     <p>📲 WhatsApp:
       <a href="https://wa.me/6285924624105" target="_blank">
@@ -169,6 +169,7 @@ header p{
       </a>
     </p>
 
+    <!-- FAQ PALING BAWAH -->
     <h2>❓ FAQ</h2>
     <p><strong>Q: Perlu login akun?</strong><br>
     A: Tidak, cukup kirim ID & Nickname.</p>
