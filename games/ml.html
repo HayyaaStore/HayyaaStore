@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="id">
+<!DOCTYPE html><html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MOBILE LEGENDS - HAYYA STORE</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
-<style>
+<title>MOBILE LEGENDS - HAYYA STORE</title><link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"><style>
 *{box-sizing:border-box}
 body{
   margin:0;
@@ -29,20 +24,17 @@ header p{
   color:#aaa;
   margin-top:10px;
 }
-
 .back{
   margin:16px;
   font-size:10px;
   cursor:pointer;
   color:#f5c542;
 }
-
 .game-title{
   text-align:center;
   font-size:14px;
   margin-bottom:18px;
 }
-
 .price-list{
   display:flex;
   flex-direction:column;
@@ -57,87 +49,124 @@ header p{
   display:flex;
   justify-content:space-between;
 }
-</style>
-</head>
-
+</style></head>
 <body>
-
 <header>
   <h1>MOBILE LEGENDS</h1>
   <p>HAYYA STORE - Harga Final</p>
 </header>
-
 <div class="back" onclick="goBack()">← Kembali</div>
-
 <div class="game-title">DIAMONDS & PASSES</div>
-<div class="price-list">
-  <div class="price"><span>Weekly Diamond Pass 2×</span><span>Rp 60.952</span></div>
-  <div class="price"><span>Weekly Diamond Pass</span><span>Rp 31.000</span></div>
-  <div class="price"><span>Twilight Pass</span><span>Rp 159.748</span></div>
-  <div class="price"><span>5 Diamonds</span><span>Rp 2.500</span></div>
-  <div class="price"><span>12 Diamonds</span><span>Rp 4.501</span></div>
-  <div class="price"><span>50 Diamonds</span><span>Rp 16.005</span></div>
-  <div class="price"><span>56 Diamonds</span><span>Rp 16.503</span></div>
-  <div class="price"><span>59 Diamonds</span><span>Rp 17.002</span></div>
-  <div class="price"><span>66 Diamonds</span><span>Rp 19.758</span></div>
-  <div class="price"><span>70 Diamonds</span><span>Rp 20.504</span></div>
-  <div class="price"><span>71 Diamonds</span><span>Rp 20.504</span></div>
-  <div class="price"><span>72 Diamonds</span><span>Rp 23.003</span></div>
-  <div class="price"><span>74 Diamonds</span><span>Rp 23.843 / Rp 24.504</span></div>
-  <div class="price"><span>78 Diamonds</span><span>Rp 24.504</span></div>
-  <div class="price"><span>80 Diamonds</span><span>Rp 25.506</span></div>
-  <div class="price"><span>83 Diamonds</span><span>Rp 26.447</span></div>
-  <div class="price"><span>85 Diamonds</span><span>Rp 26.003</span></div>
-  <div class="price"><span>92 Diamonds</span><span>Rp 29.005</span></div>
-  <div class="price"><span>98 Diamonds</span><span>Rp 30.505</span></div>
-  <div class="price"><span>100 Diamonds</span><span>Rp 30.505</span></div>
-  <div class="price"><span>110 Diamonds</span><span>Rp 33.507</span></div>
-  <div class="price"><span>113 Diamonds</span><span>Rp 33.708</span></div>
-  <div class="price"><span>118 Diamonds</span><span>Rp 35.004</span></div>
-  <div class="price"><span>129 Diamonds</span><span>Rp 38.005</span></div>
-  <div class="price"><span>144 Diamonds</span><span>Rp 42.005</span></div>
-  <div class="price"><span>170 Diamonds</span><span>Rp 48.568</span></div>
-  <div class="price"><span>182 Diamonds</span><span>Rp 52.508</span></div>
-  <div class="price"><span>184 Diamonds</span><span>Rp 55.104</span></div>
-  <div class="price"><span>229 Diamonds</span><span>Rp 65.009</span></div>
-  <div class="price"><span>240 Diamonds</span><span>Rp 67.873</span></div>
-  <div class="price"><span>257 Diamonds</span><span>Rp 72.210</span></div>
-  <div class="price"><span>278 Diamonds</span><span>Rp 78.876</span></div>
-  <div class="price"><span>284 Diamonds</span><span>Rp 79.875</span></div>
-  <div class="price"><span>284 Diamonds</span><span>Rp 80.526</span></div>
-  <div class="price"><span>296 Diamonds</span><span>Rp 82.829</span></div>
-  <div class="price"><span>301 Diamonds</span><span>Rp 83.555</span></div>
-  <div class="price"><span>324 Diamonds</span><span>Rp 90.830</span></div>
-  <div class="price"><span>345 Diamonds</span><span>Rp 96.332</span></div>
-  <div class="price"><span>355 Diamonds</span><span>Rp 98.831</span></div>
-  <div class="price"><span>366 Diamonds</span><span>Rp 114.208</span></div>
-  <div class="price"><span>374 Diamonds</span><span>Rp 111.333</span></div>
-  <div class="price"><span>381 Diamonds</span><span>Rp 112.833</span></div>
-  <div class="price"><span>408 Diamonds</span><span>Rp 119.788</span></div>
-  <div class="price"><span>425 Diamonds</span><span>Rp 124.834</span></div>
-  <div class="price"><span>427 Diamonds</span><span>Rp 125.290</span></div>
-  <div class="price"><span>450 Diamonds</span><span>Rp 134.621</span></div>
-  <div class="price"><span>512 Diamonds</span><span>Rp 148.292</span></div>
-  <div class="price"><span>518 Diamonds</span><span>Rp 151.294</span></div>
-  <div class="price"><span>522 Diamonds</span><span>Rp 151.294</span></div>
-  <div class="price"><span>554 Diamonds</span><span>Rp 160.295</span></div>
-  <div class="price"><span>568 Diamonds</span><span>Rp 159.748</span></div>
-  <div class="price"><span>601 Diamonds</span><span>Rp 174.558</span></div>
-  <div class="price"><span>712 Diamonds</span><span>Rp 198.753</span></div>
-  <div class="price"><span>716 Diamonds</span><span>Rp 200.255</span></div>
-  <div class="price"><span>717 Diamonds</span><span>Rp 200.255</span></div>
-  <div class="price"><span>750 Diamonds</span><span>Rp 209.255</span></div>
-  <div class="price"><span>758 Diamonds</span><span>Rp 218.418</span></div>
-  <div class="price"><span>762 Diamonds</span><span>Rp 215.665</span></div>
-  <div class="price"><span>808 Diamonds</span><span>Rp 224.621</span></div>
-  <div class="price"><span>875 Diamonds</span><span>Rp 239.532</span></div>
-</div>
-
+<div class="price-list">  <div class="price"><span>Weekly Diamond Pass</span><span>Rp 30.600</span></div>
+  <div class="price"><span>Weekly Diamond Pass 2×</span><span>Rp 63.100</span></div>
+  <div class="price"><span>Weekly Diamond Pass 3×</span><span>Rp 93.700</span></div>
+  <div class="price"><span>Weekly Diamond Pass 4×</span><span>Rp 123.200</span></div>
+  <div class="price"><span>Weekly Diamond Pass 5×</span><span>Rp 152.800</span></div>  <div class="price"><span>5 Diamonds</span><span>Rp 1.600</span></div>
+  <div class="price"><span>12 Diamonds</span><span>Rp 4.600</span></div>
+  <div class="price"><span>14 Diamonds</span><span>Rp 5.600</span></div>
+  <div class="price"><span>15 Diamonds</span><span>Rp 5.600</span></div>
+  <div class="price"><span>17 Diamonds</span><span>Rp 6.100</span></div>
+  <div class="price"><span>19 Diamonds</span><span>Rp 6.700</span></div>
+  <div class="price"><span>28 Diamonds</span><span>Rp 10.200</span></div>
+  <div class="price"><span>33 Diamonds</span><span>Rp 11.700</span></div>
+  <div class="price"><span>36 Diamonds</span><span>Rp 12.700</span></div>
+  <div class="price"><span>44 Diamonds</span><span>Rp 13.300</span></div>
+  <div class="price"><span>50 Diamonds</span><span>Rp 16.800</span></div>
+  <div class="price"><span>54 Diamonds</span><span>Rp 17.300</span></div>
+  <div class="price"><span>56 Diamonds</span><span>Rp 18.300</span></div>
+  <div class="price"><span>59 Diamonds</span><span>Rp 18.300</span></div>
+  <div class="price"><span>66 Diamonds</span><span>Rp 20.900</span></div>
+  <div class="price"><span>70 Diamonds</span><span>Rp 23.900</span></div>
+  <div class="price"><span>71 Diamonds</span><span>Rp 23.900</span></div>
+  <div class="price"><span>72 Diamonds</span><span>Rp 24.400</span></div>
+  <div class="price"><span>73 Diamonds</span><span>Rp 25.400</span></div>
+  <div class="price"><span>74 Diamonds</span><span>Rp 24.900</span></div>
+  <div class="price"><span>78 Diamonds</span><span>Rp 25.900</span></div>
+  <div class="price"><span>80 Diamonds</span><span>Rp 26.900</span></div>
+  <div class="price"><span>83 Diamonds</span><span>Rp 27.500</span></div>
+  <div class="price"><span>85 Diamonds</span><span>Rp 27.500</span></div>
+  <div class="price"><span>92 Diamonds</span><span>Rp 30.000</span></div>
+  <div class="price"><span>98 Diamonds</span><span>Rp 32.100</span></div>
+  <div class="price"><span>100 Diamonds</span><span>Rp 32.100</span></div>
+  <div class="price"><span>110 Diamonds</span><span>Rp 36.600</span></div>
+  <div class="price"><span>113 Diamonds</span><span>Rp 36.600</span></div>
+  <div class="price"><span>144 Diamonds</span><span>Rp 44.800</span></div>
+  <div class="price"><span>170 Diamonds</span><span>Rp 48.900</span></div>
+  <div class="price"><span>182 Diamonds</span><span>Rp 52.500</span></div>
+  <div class="price"><span>184 Diamonds</span><span>Rp 53.500</span></div>
+  <div class="price"><span>229 Diamonds</span><span>Rp 71.200</span></div>
+  <div class="price"><span>240 Diamonds</span><span>Rp 74.100</span></div>
+  <div class="price"><span>257 Diamonds</span><span>Rp 80.400</span></div>
+  <div class="price"><span>284 Diamonds</span><span>Rp 87.300</span></div>
+  <div class="price"><span>296 Diamonds</span><span>Rp 90.400</span></div>
+  <div class="price"><span>301 Diamonds</span><span>Rp 91.900</span></div>
+  <div class="price"><span>324 Diamonds</span><span>Rp 98.500</span></div>
+  <div class="price"><span>345 Diamonds</span><span>Rp 104.100</span></div>
+  <div class="price"><span>355 Diamonds</span><span>Rp 106.700</span></div>
+  <div class="price"><span>366 Diamonds</span><span>Rp 106.900</span></div>
+  <div class="price"><span>374 Diamonds</span><span>Rp 108.300</span></div>
+  <div class="price"><span>381 Diamonds</span><span>Rp 109.800</span></div>
+  <div class="price"><span>425 Diamonds</span><span>Rp 122.000</span></div>
+  <div class="price"><span>427 Diamonds</span><span>Rp 122.500</span></div>
+  <div class="price"><span>450 Diamonds</span><span>Rp 129.700</span></div>
+  <div class="price"><span>512 Diamonds</span><span>Rp 145.900</span></div>
+  <div class="price"><span>518 Diamonds</span><span>Rp 148.000</span></div>
+  <div class="price"><span>522 Diamonds</span><span>Rp 149.200</span></div>
+  <div class="price"><span>554 Diamonds</span><span>Rp 157.600</span></div>
+  <div class="price"><span>568 Diamonds</span><span>Rp 157.600</span></div>
+  <div class="price"><span>601 Diamonds</span><span>Rp 168.200</span></div>
+  <div class="price"><span>602 Diamonds</span><span>Rp 172.300</span></div>
+  <div class="price"><span>712 Diamonds</span><span>Rp 197.300</span></div>
+  <div class="price"><span>716 Diamonds</span><span>Rp 201.700</span></div>
+  <div class="price"><span>717 Diamonds</span><span>Rp 198.800</span></div>
+  <div class="price"><span>750 Diamonds</span><span>Rp 208.000</span></div>
+  <div class="price"><span>758 Diamonds</span><span>Rp 214.100</span></div>
+  <div class="price"><span>762 Diamonds</span><span>Rp 214.500</span></div>
+  <div class="price"><span>808 Diamonds</span><span>Rp 224.600</span></div>
+  <div class="price"><span>875 Diamonds</span><span>Rp 239.800</span></div>
+  <div class="price"><span>965 Diamonds</span><span>Rp 265.800</span></div>
+  <div class="price"><span>977 Diamonds</span><span>Rp 269.400</span></div>
+  <div class="price"><span>1050 Diamonds</span><span>Rp 290.400</span></div>
+  <div class="price"><span>1134 Diamonds</span><span>Rp 312.500</span></div>
+  <div class="price"><span>1139 Diamonds</span><span>Rp 314.000</span></div>
+  <div class="price"><span>1159 Diamonds</span><span>Rp 319.100</span></div>
+  <div class="price"><span>1164 Diamonds</span><span>Rp 320.700</span></div>
+  <div class="price"><span>1183 Diamonds</span><span>Rp 325.700</span></div>
+  <div class="price"><span>1220 Diamonds</span><span>Rp 335.900</span></div>
+  <div class="price"><span>1230 Diamonds</span><span>Rp 338.400</span></div>
+  <div class="price"><span>1704 Diamonds</span><span>Rp 464.600</span></div>
+  <div class="price"><span>1750 Diamonds</span><span>Rp 474.600</span></div>
+  <div class="price"><span>1835 Diamonds</span><span>Rp 498.000</span></div>
+  <div class="price"><span>2010 Diamonds</span><span>Rp 515.300</span></div>
+  <div class="price"><span>2046 Diamonds</span><span>Rp 555.900</span></div>
+  <div class="price"><span>2180 Diamonds</span><span>Rp 562.100</span></div>
+  <div class="price"><span>2199 Diamonds</span><span>Rp 567.700</span></div>
+  <div class="price"><span>2350 Diamonds</span><span>Rp 608.800</span></div>
+  <div class="price"><span>2382 Diamonds</span><span>Rp 618.500</span></div>
+  <div class="price"><span>2536 Diamonds</span><span>Rp 660.200</span></div>
+  <div class="price"><span>2578 Diamonds</span><span>Rp 667.800</span></div>
+  <div class="price"><span>2885 Diamonds</span><span>Rp 750.000</span></div>
+  <div class="price"><span>2904 Diamonds</span><span>Rp 755.700</span></div>
+  <div class="price"><span>2977 Diamonds</span><span>Rp 777.000</span></div>
+  <div class="price"><span>3453 Diamonds</span><span>Rp 903.600</span></div>
+  <div class="price"><span>3481 Diamonds</span><span>Rp 911.700</span></div>
+  <div class="price"><span>3693 Diamonds</span><span>Rp 971.100</span></div>
+  <div class="price"><span>4020 Diamonds</span><span>Rp 1.024.500</span></div>
+  <div class="price"><span>4026 Diamonds</span><span>Rp 1.057.200</span></div>
+  <div class="price"><span>4030 Diamonds</span><span>Rp 1.027.000</span></div>
+  <div class="price"><span>4404 Diamonds</span><span>Rp 1.131.200</span></div>
+  <div class="price"><span>4678 Diamonds</span><span>Rp 1.201.900</span></div>
+  <div class="price"><span>4830 Diamonds</span><span>Rp 1.227.900</span></div>
+  <div class="price"><span>5372 Diamonds</span><span>Rp 1.377.600</span></div>
+  <div class="price"><span>5398 Diamonds</span><span>Rp 1.381.200</span></div>
+  <div class="price"><span>5568 Diamonds</span><span>Rp 1.428.000</span></div>
+  <div class="price"><span>5940 Diamonds</span><span>Rp 1.541.900</span></div>
+  <div class="price"><span>5943 Diamonds</span><span>Rp 1.530.600</span></div>
+  <div class="price"><span>6001 Diamonds</span><span>Rp 1.543.700</span></div></div>
 <script>
 function goBack(){
   window.history.back();
 }
 </script>
-
 </body>
     </html>
